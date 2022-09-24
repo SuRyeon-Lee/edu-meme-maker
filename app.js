@@ -2,22 +2,30 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 800;
+ctx.lineWidth = 2;
 
-ctx.fillRect(210,200,15,100);
-ctx.fillRect(360,200,15,100);
-ctx.fillRect(260,200,60,200);
+const colors = [
+    '#55efc4',
+    '#81ecec',
+    '#74b9ff',
+    '#a29bfe',
+    '#00b894',
+    '#00cec9',
+    '#0984e3',
+    '#6c5ce7',
+    '#ffeaa7',
+    '#fab1a0',
+    '#ff7675',
+    '#fd79a8'
+]
 
-ctx.arc(290, 130, 50, 0, 2 * Math.PI); //원중심점 기준 (x위치,y위치,반지름,시작각,끝각)
-ctx.fill();
+const onClick = (e) => {
+    ctx.beginPath()
+    ctx.moveTo(0,0);
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    ctx.strokeStyle = color;
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+};
 
-ctx.beginPath();
-ctx.fillStyle = 'white';
-ctx.arc(280, 120, 5, Math.PI, 2 * Math.PI);
-ctx.arc(300, 120, 5, Math.PI, 2 * Math.PI);
-ctx.fill();
-
-ctx.beginPath();
-ctx.lineWidth = 4
-ctx.strokeStyle = 'pink';
-ctx.arc(290, 130, 20, 0, 1 * Math.PI);
-ctx.stroke();
+canvas.addEventListener('mousemove',onClick);
