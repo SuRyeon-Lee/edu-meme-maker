@@ -6,6 +6,12 @@ Learning Js Canvas
 이 노트에선 본격적 프로젝트에 들어가기 앞서 배운 지식들만 정리했습니다.
 <br/><br/><br/><br/>
 
+# 🖼 완성본
+[나의 짤 생성기](https://suryeon-lee.github.io/edu-meme-maker/)
+업그레이드 기능 추가 예정입니다.
+<br/>
+
+
 # ✏️Basic
 
 ## 캔버스 만들기
