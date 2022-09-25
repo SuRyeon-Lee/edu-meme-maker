@@ -2,6 +2,8 @@
 Learning Js Canvas
 <br/><br/>
 * 노마드코더님의 [바닐라 JS로 그림 앱 만들기](https://nomadcoders.co/javascript-for-beginners-2) 강의를 들으며 작성한 필기노트입니다.
+그림판, meme-maker의 로직과 설명은 코드와 주석으로 존재합니다.
+이 노트에선 본격적 프로젝트에 들어가기 앞서 배운 지식들만 정리했습니다.
 <br/><br/><br/><br/>
 
 # ✏️Basic
@@ -13,6 +15,7 @@ const ctx = canvas.getContext("2d"); //canvas를 그리는 붓 만들기
 canvas.width = 800; //캔버스 기본 너비 정하기 (css에서도 설정 필요)
 canvas.height = 800; //캔버스 기본 높이 정하기 (css에서도 설정 필요)
 ```
+<br/>
 
 ## 캔버스에 그리기
 ```js
@@ -50,7 +53,7 @@ ctx.rect(150, 150, 100, 100);
 ctx.rect(250, 250, 100, 100);
 ctx.fill()
 ```
-
+<br/>
 
 ## 컬러 지정하기
 ```js
@@ -60,7 +63,7 @@ ctx.rect(250, 250, 100, 100);
 ctx.fillStyle = "red"
 ctx.fill(); //빨간색 네모 세개 그려짐
 ```
-
+<br/>
 
 ## context 이해하기
 ```js
@@ -76,12 +79,14 @@ ctx.fill(); //위엔 빨간색 물감만 찍어바른거고 여기까지 해야 
 ```
 * ✂️ 이전 코드까지 영향받지 않도록 하기 위해선 새로운 도형을 그릴땐 ctx를 beginPath로 한번 끊었다 다시 시작해줘야한다.
 
+<br/>
 
 ## 그릴 위치 조정하기:moveTo()
 ```js
 ctx.moveTo(50,50); //그릴 위치에 브러쉬를 옮긴다.
 ctx.lineTo() //그 위치에서부터 그리기 시작한다.
 ```
+<br/>
 
 
 ## 점과점 연결해서 선 그리기:lineTo()
@@ -90,6 +95,7 @@ ctx.moveTo(50,50); //그릴 위치에 브러쉬를 옮긴다.
 ctx.lineTo(150, 50); //(x:50,y:50) -> (150,50)으로 선긋기
 ctx.stroke()
 ```
+<br/>
 
 
 ## 원그리기
@@ -99,6 +105,7 @@ ctx.arc(250, 100, 50, 0, 2 * Math.PI);
 //시작각과 끝각이 헷갈린다면 > https://www.w3schools.com/tags/canvas_arc.asp
 ctx.fill()
 ```
+<br/>
 
 
 ## 집모양 만들기 실습 🏠
@@ -113,6 +120,7 @@ ctx.lineTo(450,200)
 ctx.fill()
 ctx.stroke()
 ```
+<br/>
 
 
 ## 사람 만들기 실습 🕺
